@@ -1,0 +1,85 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.bold-font {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+.regular-font {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+// Colors
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(212, 45%, 89%);
+$grayishBlue: hsl(220, 15%, 55%);
+$darkBlue: hsl(218, 44%, 22%);
+
+// Breakpoints:
+$breakpoints: (
+  "mobile": 375px,
+  "desktop": 1440px,
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Mixins:
+
+@mixin flex($direction, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.page-container {
+  @include flex(column, center, center);
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $lightGray;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 1rem;
+  width: 85%;
+  height: 500px;
+  @include breakpoint("mobile") {
+    max-width: 274px;
+  }
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.text-container {
+  flex-grow: 1;
+  @include flex(column, space-around, center);
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+}
