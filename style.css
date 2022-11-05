@@ -31,30 +31,36 @@ html {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 1rem;
   width: 85%;
-  height: 500px;
+  height: 520px;
 }
 @media (min-width: 375px) {
   .card {
-    max-width: 274px;
+    max-width: 320px;
   }
 }
 
 .image {
   max-width: 100%;
-  border-radius: 1rem;
-  margin: 1rem;
+  border-radius: 0.5rem;
+  margin: 0.75rem;
 }
 
 .text-container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: normal;
   align-items: center;
-  margin-right: 1rem;
-  margin-left: 1rem;
 }
 
 .heading {
+  text-align: center;
   font-size: 1.5rem;
+  margin: 1.25rem;
+}
+
+.body-text {
+  text-align: center;
+  margin: 1.25rem;
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */
