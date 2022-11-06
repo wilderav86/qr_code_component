@@ -61,7 +61,7 @@ $breakpoints: (
   background-color: $white;
   border-radius: 1rem;
   width: 85%;
-  height: 520px;
+  height: 500px;
   @include breakpoint("mobile") {
     max-width: 320px;
   }
@@ -70,7 +70,7 @@ $breakpoints: (
 .image {
   max-width: 100%;
   border-radius: 0.5rem;
-  margin: 0.75rem;
+  margin: 1rem;
 }
 
 .text-container {
@@ -80,12 +80,14 @@ $breakpoints: (
 
 .heading {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 1.25rem;
+  color: $darkBlue;
 }
 
 .body-text {
   text-align: center;
   margin: 1.25rem;
   margin-top: 0;
+  color: $grayishBlue;
 }

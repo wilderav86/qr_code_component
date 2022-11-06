@@ -31,7 +31,7 @@ html {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 1rem;
   width: 85%;
-  height: 520px;
+  height: 500px;
 }
 @media (min-width: 375px) {
   .card {
@@ -42,7 +42,7 @@ html {
 .image {
   max-width: 100%;
   border-radius: 0.5rem;
-  margin: 0.75rem;
+  margin: 1rem;
 }
 
 .text-container {
@@ -55,12 +55,14 @@ html {
 
 .heading {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 1.25rem;
+  color: hsl(218deg, 44%, 22%);
 }
 
 .body-text {
   text-align: center;
   margin: 1.25rem;
   margin-top: 0;
+  color: hsl(220deg, 15%, 55%);
 }/*# sourceMappingURL=style.css.map */
